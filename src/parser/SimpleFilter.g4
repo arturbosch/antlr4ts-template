@@ -2,7 +2,7 @@ grammar SimpleFilter;
 
 filter: sortableExpression ('AND' sortableExpression)*;
 
-sortableExpression: expression (sortby (asc | dsc))*;
+sortableExpression: expression (sortby (asc | dsc))?;
 
 expression:
 	expression OR expression				# orExpression
